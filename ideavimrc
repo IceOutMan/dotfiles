@@ -1,6 +1,89 @@
 
+""" Map leader to space ---------------------
+let mapleader=" "
+
+""" ys cs ds
+set surround
+""" vae -select all, dae - delete all
+set textobj-entire
+set easymotion
+""" cia daa via
+set argtextobj
+
+""" Plugin settings -------------------------
+let g:argtextobj_pairs="[:],(:),<:>"
+
+""" Common settings -------------------------
+""" set showmode
+""" set so=5
+set incsearch
+""" set nu
+
+
+""" Idea specific settings ------------------
+""" set ideajoin
+""" set ideastatusicon=gray
+""" set idearefactormode=keep
+
+""" Mappings --------------------------------
+noremap <Leader><Leader> wbve
+
+""" action map
+map <Leader>vp <Action>(SelectInProjectView)
+map <leader>bn <Action>(ToggleLineBreakpoint)
+map <Leader>bv <Action>(ViewBreakpoints)
+map <Leader>tm <Action>(ActivateTerminalToolWindow)
+
+""" show pop
+map sd <Action>(ShowUmlDiagramPopup)
+map sfs <Action>(FileStructurePopup)
+map sth <Action>(HierarchyGroup)
+
+""" search
+map <Leader>sa <Action>(SearchEverywhere)
+map <Leader>sf <Action>(GotoFile)
+map <Leader>sc <Action>(GotoClass)
+map <Leader>ff <Action>(Find)
+map <Leader>fp <Action>(FindInPath)
+map <Leader>fu <Action>(FindUsages)
+
+""" code
+map <Leader>l <Action>(Forward)
+map <Leader>h <Action>(Back)
+
+map mj <Action>(MethodDown)
+map mk <Action>(MethodUp)
+
+map <Leader>gf <Action>(GotoFile)
+map <Leader>i <Action>(GotoImplementation)
+map <Leader>fc <Action>(ReformatCode)
+map <Leader>m <Action>(ImplementMethods)
+
+map <Leader>qd <Action>(QuickJavaDoc)
+
+map <Leader>ca <Action>(CollapseAllRegions)
+map <Leader>ea <Action>(ExpandAllRegions)
+""" tab
+map tl <Action>(NextTab)
+map th <Action>(PreviousTab)
+map tt <Action>(CloseContent)
+
+""" git
+map ga <Action>(Annotate)
+
+""" run debug
+map <Leader>r <Action>(RunClass)
+map <Leader>R <Action>(Run)
+map <Leader>d <Action>(DebugClass)
+map <Leader>D <Action>(Debug)
+map <Leader>S <Action>(Stop)
+
 noremap J 5j
 noremap K 5k
-
 noremap L 5l
 noremap H 5h
+
+noremap B 2b
+noremap W 2w
+
+""" Mappings --------------------------------
