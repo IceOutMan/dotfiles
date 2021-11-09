@@ -10,6 +10,9 @@ set easymotion
 """ cia daa via
 set argtextobj
 
+set number
+set relativenumber
+
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
 
@@ -26,26 +29,27 @@ set incsearch
 """ set idearefactormode=keep
 
 """ Mappings --------------------------------
-noremap <Leader><Leader> wbve
+map S :w<CR>
+map <Leader><Leader> wbve
+
+""" show something
+map <Leader>vp <Action>(SelectInProjectView)
+map <Leader>vd <Action>(ShowUmlDiagramPopup)
+map <Leader>vs <Action>(FileStructurePopup)
+map <Leader>vh <Action>(HierarchyGroup)
+
 
 """ action map
-map <Leader>vp <Action>(SelectInProjectView)
 map <leader>bn <Action>(ToggleLineBreakpoint)
 map <Leader>bv <Action>(ViewBreakpoints)
 map <Leader>tm <Action>(ActivateTerminalToolWindow)
-
-""" show pop
-map sd <Action>(ShowUmlDiagramPopup)
-map sfs <Action>(FileStructurePopup)
-map sth <Action>(HierarchyGroup)
 
 """ search
 map <Leader>sa <Action>(SearchEverywhere)
 map <Leader>sf <Action>(GotoFile)
 map <Leader>sc <Action>(GotoClass)
-map <Leader>ff <Action>(Find)
-map <Leader>fp <Action>(FindInPath)
-map <Leader>fu <Action>(FindUsages)
+map <Leader>sp <Action>(FindInPath)
+map <Leader>su <Action>(FindUsages)
 
 """ code
 map <Leader>l <Action>(Forward)
