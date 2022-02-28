@@ -1,0 +1,76 @@
+{
+    "window.zoomLevel": 2,
+    "workbench.colorTheme": "Visual Studio Light",
+    "workbench.editorAssociations": [
+        {
+            "viewType": "jupyter.notebook.ipynb",
+            "filenamePattern": "*.ipynb"
+        }
+    ],
+    "editor.lineNumbers": "relative",
+    "editor.rulers": [
+    ],
+    // esaymotion plugin 
+    "vim.easymotion": true,
+    "vim.incsearch": true,
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "j"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": ["<leader>","d"],
+            "after": ["d", "d" ]
+        },
+        {
+            "before": ["J"],
+            "after": ["5","j" ]
+        },
+        {
+            "before": ["K"],
+            "after": ["5","k" ]
+        },
+        {
+            "before": ["H"],
+            "after": ["5","h" ]
+        },
+        {
+            "before": ["L"],
+            "after": ["5","l" ]
+        },
+        {
+            "before": ["S"],
+            "commands": ["workbench.action.files.save"]
+        },
+        {
+            "before": ["<C-n>"],
+            "commands": [":nohl"]
+        },
+        {
+            "before":["<leader>","<leader>"],
+            "after": ["w","b","v","e"]
+        },
+        {
+            "before":["<leader>","t","m"],
+            "commands":["workbench.action.terminal.toggleTerminal"],
+            "when":"terminal.active"
+        }
+    ],
+    "vim.leader": "<space>",
+    "vim.handleKeys": {
+        "<C-a>": false,
+        "<C-f>": false
+    },
+    "explorer.confirmDelete": false,
+    
+}
