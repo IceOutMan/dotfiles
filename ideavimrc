@@ -30,7 +30,7 @@ set incsearch
 
 """ Mappings --------------------------------
 map S :w<CR>
-map <Leader><Leader> wbve
+map <Leader>w wbve
 
 """ show something
 map <Leader>vp <Action>(SelectInProjectView)
