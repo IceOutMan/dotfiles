@@ -131,4 +131,11 @@ let g:NERDTreeIndicatorMapCustom = {
     \ "Unknown"   : "?"
     \ }
 
-
+" Compile function
+map <Leader>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+  exec "w"
+  if &filetype == 'go'
+    exec "GoRun"
+  endif
+endfunc
