@@ -2,46 +2,7 @@
 " my key map config
 let mapleader=" "
 
-set clipboard=unnamed
-set wildmenu
-set cursorline
-set foldmethod=indent	
-set foldlevel=99	
-
-set number
-set relativenumber
-
-" 快速移动光标
-noremap J 5j
-noremap K 5k
-
-noremap L 5l
-noremap H 5h
-
-" 快速保存、退出、加载配置文件
-noremap Q :q<CR>
-noremap S :w<CR>
-noremap R :source $INITVIM<CR>
-
-" 屏幕分块
-noremap sl :set splitright<CR>:vsplit<CR>
-noremap sh :set nosplitright<CR>:vsplit<CR>
-noremap sk :set nosplitbelow<CR>:split<CR>
-noremap sj :set splitbelow<CR>:split<CR>
-
-" 屏幕分块跳转
-noremap <LEADER>h <C-w>h
-noremap <LEADER>l <C-w>l
-noremap <LEADER>j <C-w>j
-noremap <LEADER>k <C-w>k
-
-" 屏幕分块大小调整
-noremap <C-k> :res +5<CR>
-noremap <C-j> :res -5<CR>
-noremap <C-h> :vertical resize-5<CR>
-noremap <C-l> :vertical resize+5<CR>
-
-
+filetype off
 
 " 插件配置
 call plug#begin()
@@ -88,6 +49,56 @@ Plug 'vim-scripts/SuperTab'
 call plug#end()
 
 filetype plugin indent on
+
+" my key map config
+set clipboard=unnamed
+set wildmenu
+set cursorline
+set foldmethod=indent	
+set foldlevel=99	
+
+set number
+set relativenumber
+
+" 快速移动光标
+noremap J 5j
+noremap K 5k
+
+noremap L 5l
+noremap H 5h
+
+" 快速保存、退出、加载配置文件
+noremap Q :q<CR>
+noremap S :w<CR>
+noremap R :source $INITVIM<CR>
+
+" 屏幕分块
+noremap sl :set splitright<CR>:vsplit<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>
+noremap sk :set nosplitbelow<CR>:split<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+
+" 屏幕分块跳转
+noremap <LEADER>h <C-w>h
+noremap <LEADER>l <C-w>l
+noremap <LEADER>j <C-w>j
+noremap <LEADER>k <C-w>k
+
+" 屏幕分块大小调整
+noremap <C-k> :res +5<CR>
+noremap <C-j> :res -5<CR>
+noremap <C-h> :vertical resize-5<CR>
+noremap <C-l> :vertical resize+5<CR>
+
+
+" tab cahnge
+noremap tn :tabe<CR>
+noremap th :+tabnext<CR>
+noremap tl :-tabnext<CR>
+
+" vim-go config - default mapping close such <K> is :Godoc
+let g:go_def_mapping_enabled = 0
+let g:go_doc_keywordprg_enabled = 0
 
 " ===
 " === vim-indent-guide
@@ -139,3 +150,8 @@ func! CompileRunGcc()
     exec "GoRun"
   endif
 endfunc
+
+" vim-go custom mappings
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
