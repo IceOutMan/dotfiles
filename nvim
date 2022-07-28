@@ -112,6 +112,9 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " plugin config
 " ===
+" ma - 创建文件| 文件夹
+" md - 删除文件| 文件夹
+" mm - 移动文件 ｜ 修改文件名
 " === NERDTree
 " ===
 map tt :NERDTreeToggle<CR>
