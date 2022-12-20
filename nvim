@@ -14,8 +14,8 @@ Plug 'vim-airline/vim-airline'
 " auto pairs
 Plug 'jiangmiao/auto-pairs'
 
-" go  nerdtree
-Plug 'fatih/vim-go', { 'tag': '*'}
+" go & nerdtree
+Plug 'fatih/vim-go', { 'do': ':GoUpdateBinaries'}
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
 
 " Git
@@ -34,10 +34,13 @@ Plug 'mattn/emmet-vim'
 
 " Python
 Plug 'vim-scripts/indentpython.vim'
+Plug 'python-mode/python-mode', {'branch': 'develop'}
 
+" 代码注释 vim-commentary
+Plug 'tpope/vim-commentary'
 
 " coco代码补全
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
+" Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 缩进
 Plug 'nathanaelkane/vim-indent-guides'
