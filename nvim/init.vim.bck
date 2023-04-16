@@ -1,5 +1,5 @@
 
-" my map leader
+" my key map config
 let mapleader=" "
 
 filetype off
@@ -7,25 +7,17 @@ filetype off
 " 插件配置
 call plug#begin()
 
+
 " 主题
 Plug 'vim-airline/vim-airline'
 
-" 配色
-" " colorscheme neodark
-Plug 'KeitaNakamura/neodark.vim'
-" colorscheme monokai
-Plug 'crusoexia/vim-monokai'
-" colorscheme github
-Plug 'acarapetis/vim-colors-github'
-" colorscheme one
-Plug 'rakr/vim-one'
-
 " auto pairs
 Plug 'jiangmiao/auto-pairs'
+
 " go  nerdtree
 Plug 'fatih/vim-go', { 'tag': '*'}
-Plug 'dgryski/vim-godef'
 Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
 " Git
 Plug 'rhysd/conflict-marker.vim'
 Plug 'tpope/vim-fugitive'
@@ -43,11 +35,13 @@ Plug 'mattn/emmet-vim'
 " Python
 Plug 'vim-scripts/indentpython.vim'
 
+
 " coco代码补全
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
 " 缩进
 Plug 'nathanaelkane/vim-indent-guides'
+
 
 " 可以在 vim 中使用 tab 补全
 Plug 'vim-scripts/SuperTab'
@@ -118,6 +112,9 @@ let g:indent_guides_enable_on_vim_startup = 1
 
 " plugin config
 " ===
+" ma - 创建文件| 文件夹
+" md - 删除文件| 文件夹
+" mm - 移动文件 ｜ 修改文件名
 " === NERDTree
 " ===
 map tt :NERDTreeToggle<CR>
