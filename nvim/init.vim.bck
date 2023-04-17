@@ -1,0 +1,160 @@
+
+" my key map config
+let mapleader=" "
+
+filetype off
+
+" 插件配置
+call plug#begin()
+
+
+" 主题
+Plug 'vim-airline/vim-airline'
+
+" auto pairs
+Plug 'jiangmiao/auto-pairs'
+
+" go  nerdtree
+Plug 'fatih/vim-go', { 'tag': '*'}
+Plug 'scrooloose/nerdtree', { 'on':  'NERDTreeToggle' }
+
+" Git
+Plug 'rhysd/conflict-marker.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'mhinz/vim-signify'
+Plug 'gisphm/vim-gitignore', { 'for': ['gitignore', 'vim-plug'] }
+
+" HTML, CSS, JavaScript, PHP, JSON, etc.
+Plug 'elzr/vim-json'
+Plug 'hail2u/vim-css3-syntax'
+Plug 'spf13/PIV', { 'for' :['php', 'vim-plug'] }
+Plug 'gko/vim-coloresque', { 'for': ['vim-plug', 'php', 'html', 'javascript', 'css', 'less'] }
+Plug 'pangloss/vim-javascript', { 'for' :['javascript', 'vim-plug'] }
+Plug 'mattn/emmet-vim'
+
+" Python
+Plug 'vim-scripts/indentpython.vim'
+
+
+" coco代码补全
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+" 缩进
+Plug 'nathanaelkane/vim-indent-guides'
+
+
+" 可以在 vim 中使用 tab 补全
+Plug 'vim-scripts/SuperTab'
+
+call plug#end()
+
+filetype plugin indent on
+
+" my key map config
+set clipboard=unnamed
+set wildmenu
+set cursorline
+set foldmethod=indent	
+set foldlevel=99	
+
+set number
+set relativenumber
+
+" 快速移动光标
+noremap J 5j
+noremap K 5k
+
+noremap L 5l
+noremap H 5h
+
+" 快速保存、退出、加载配置文件
+noremap Q :q<CR>
+noremap S :w<CR>
+noremap R :source $INITVIM<CR>
+
+" 屏幕分块
+noremap sl :set splitright<CR>:vsplit<CR>
+noremap sh :set nosplitright<CR>:vsplit<CR>
+noremap sk :set nosplitbelow<CR>:split<CR>
+noremap sj :set splitbelow<CR>:split<CR>
+
+" 屏幕分块跳转
+noremap <LEADER>h <C-w>h
+noremap <LEADER>l <C-w>l
+noremap <LEADER>j <C-w>j
+noremap <LEADER>k <C-w>k
+
+" 屏幕分块大小调整
+noremap <C-k> :res +5<CR>
+noremap <C-j> :res -5<CR>
+noremap <C-h> :vertical resize-5<CR>
+noremap <C-l> :vertical resize+5<CR>
+
+
+" tab cahnge
+noremap tn :tabe<CR>
+noremap th :+tabnext<CR>
+noremap tl :-tabnext<CR>
+
+" vim-go config - default mapping close such <K> is :Godoc
+let g:go_def_mapping_enabled = 0
+let g:go_doc_keywordprg_enabled = 0
+
+" ===
+" === vim-indent-guide
+" ===
+set ts=2 sw=2 et
+set autoindent
+let g:indent_guides_start_level = 2
+let g:indent_guides_guide_size=1
+let g:indent_guides_enable_on_vim_startup = 1
+
+
+" plugin config
+" ===
+" ma - 创建文件| 文件夹
+" md - 删除文件| 文件夹
+" mm - 移动文件 ｜ 修改文件名
+" === NERDTree
+" ===
+map tt :NERDTreeToggle<CR>
+let NERDTreeMapOpenExpl = ""
+let NERDTreeMapUpdir = ""
+let NERDTreeMapUpdirKeepOpen = "u"
+let NERDTreeMapOpenSplit = ""
+let NERDTreeOpenVSplit = ""
+let NERDTreeMapActivateNode = "i"
+let NERDTreeMapOpenInTab = "o"
+let NERDTreeMapPreview = ""
+let NERDTreeMapCloseDir = "c"
+let NERDTreeMapChangeRoot = "r"
+
+
+" ==
+" == NERDTree-git
+" ==
+let g:NERDTreeIndicatorMapCustom = {
+    \ "Modified"  : "✹",
+    \ "Staged"    : "✚",
+    \ "Untracked" : "✭",
+    \ "Renamed"   : "➜",
+    \ "Unmerged"  : "═",
+    \ "Deleted"   : "✖",
+    \ "Dirty"     : "✗",
+    \ "Clean"     : "✔︎",
+    \ "Unknown"   : "?"
+    \ }
+
+" Compile function
+map <Leader>r :call CompileRunGcc()<CR>
+func! CompileRunGcc()
+  exec "w"
+  if &filetype == 'go'
+    exec "GoRun"
+  endif
+endfunc
+
+" vim-go custom mappings
+au FileType go nmap <Leader>gd <Plug>(go-doc)
+au FileType go nmap <Leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>r <Plug>(go-run)
