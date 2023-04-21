@@ -52,8 +52,19 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
+-- go
+
+
   -- code formater
   use 'sbdchd/neoformat'
+  -- ident config in init.lua
+  use "lukas-reineke/indent-blankline.nvim"
+  -- treesiter  code highlight
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = ':TSUpdate'
+    }
+
   -- code runner
   use { 'michaelb/sniprun', run = 'bash ./install.sh' }
   use 'thinca/vim-quickrun'
