@@ -52,6 +52,10 @@ return require('packer').startup(function(use)
   use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
   use 'L3MON4D3/LuaSnip' -- Snippets plugin
 
+  --  coc.nvim  代码补全
+  use {'neoclide/coc.nvim', branch = 'release'}
+
+
 -- go
 
 

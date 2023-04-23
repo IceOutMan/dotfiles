@@ -1,6 +1,7 @@
 require("init-packer")
 require("init-lsp")
 require("init-ident")
+require("init-coc")
 
 -- common config
 vim.o.relativenumber = true
@@ -67,4 +68,4 @@ vim.cmd('noremap sj :set splitbelow<CR>:split<CR>')
 
 -- Nvim tree qucik 
 vim.cmd('map tt :NvimTreeToggle<CR>')
-vim.cmd('map <LEADER>r :QuickRun<CR>')
+-- vim.cmd('map <LEADER>r :QuickRun<CR>')
