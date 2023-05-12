@@ -16,8 +16,8 @@ return require('packer').startup(function(use)
   -- auto pair
   use {
 	"windwp/nvim-autopairs",
-    config = function() 
-        require("nvim-autopairs").setup {} 
+    config = function()
+        require("nvim-autopairs").setup {}
     end
   }
 
@@ -44,7 +44,7 @@ return require('packer').startup(function(use)
         require("nvim-tree").setup {}
     end
   }
-  
+
   -- lsp config
   use 'neovim/nvim-lspconfig'
   use 'hrsh7th/nvim-cmp' -- Autocompletion plugin
@@ -56,9 +56,6 @@ return require('packer').startup(function(use)
   use {'neoclide/coc.nvim', branch = 'release'}
 
 
--- go
-
-
   -- code formater
   use 'sbdchd/neoformat'
   -- ident config in init.lua
@@ -68,10 +65,6 @@ return require('packer').startup(function(use)
       'nvim-treesitter/nvim-treesitter',
       run = ':TSUpdate'
     }
-
-  -- code runner
-  use { 'michaelb/sniprun', run = 'bash ./install.sh' }
-  use 'thinca/vim-quickrun'
 
 
 

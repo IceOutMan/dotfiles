@@ -6,7 +6,7 @@ let mapleader=" "
 set surround
 """ vae -select all, dae - delete all
 set textobj-entire
-set easymotion
+""" set easymotion
 """ cia daa via
 set argtextobj
 
@@ -21,6 +21,7 @@ let g:argtextobj_pairs="[:],(:),<:>"
 """ set so=5
 set incsearch
 """ set nu
+
 
 
 """ Idea specific settings ------------------
@@ -40,8 +41,9 @@ map <Leader>vh <Action>(HierarchyGroup)
 
 
 """ action map
-map <leader>bn <Action>(ToggleLineBreakpoint)
-map <Leader>bv <Action>(ViewBreakpoints)
+map <leader>b <Action>(ToggleLineBreakpoint)
+map <Leader>vb <Action>(ViewBreakpoints)
+""" terminal tool window
 map <Leader>tm <Action>(ActivateTerminalToolWindow)
 
 """ search
@@ -52,8 +54,8 @@ map <Leader>sp <Action>(FindInPath)
 map <Leader>su <Action>(FindUsages)
 
 """ code
-map <Leader>l <Action>(Forward)
-map <Leader>h <Action>(Back)
+map <Leader>] <Action>(Forward)
+map <Leader>[ <Action>(Back)
 
 map mj <Action>(MethodDown)
 map mk <Action>(MethodUp)
@@ -90,4 +92,7 @@ noremap H 5h
 noremap B 2b
 noremap W 2w
 
+
+
 """ Mappings --------------------------------
+""" inoremap ,f for(int i = 0; i#; i++) {}<ESC>F#xi<

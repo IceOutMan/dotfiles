@@ -1,4 +1,5 @@
 require("init-packer")
+
 require("init-lsp")
 require("init-ident")
 require("init-coc")
@@ -59,13 +60,28 @@ vim.cmd('noremap <LEADER>l <C-w>l')
 vim.cmd('noremap <LEADER>j <C-w>j')
 vim.cmd('noremap <LEADER>k <C-w>k')
 
+-- code skip <C-o> is Back, <C-i> is Pre
+vim.cmd('noremap <LEADER>[ <C-o>')
+vim.cmd('noremap <LEADER>] <C-i>')
+
 -- Screen Split
 vim.cmd('noremap sl :set splitright<CR>:vsplit<CR>')
 vim.cmd('noremap sh :set nosplitright<CR>:vsplit<CR>')
 vim.cmd('noremap sk :set nosplitbelow<CR>:split<CR>')
 vim.cmd('noremap sj :set splitbelow<CR>:split<CR>')
 
+-- Terminal Split
+vim.cmd('noremap tl :set splitright<CR>:vsplit<CR>:te<CR>')
+vim.cmd('noremap th :set nosplitright<CR>:vsplit<CR>:te<CR>')
+vim.cmd('noremap tk :set nosplitbelow<CR>:split<CR>:te<CR>')
+vim.cmd('noremap tj :set splitbelow<CR>:split<CR>:te<CR>')
+
+
+
 
 -- Nvim tree qucik 
 vim.cmd('map tt :NvimTreeToggle<CR>')
 -- vim.cmd('map <LEADER>r :QuickRun<CR>')
+
+-- Terminal-Mode close
+vim.cmd('tnoremap tq <C-\\><C-n>')
