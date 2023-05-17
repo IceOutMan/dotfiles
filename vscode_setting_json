@@ -28,43 +28,83 @@
         }
     ],
     "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": ["<leader>","d"],
-            "after": ["d", "d" ]
-        },
-        {
-            "before": ["J"],
-            "after": ["5","j" ]
-        },
-        {
-            "before": ["K"],
-            "after": ["5","k" ]
-        },
-        {
-            "before": ["H"],
-            "after": ["5","h" ]
-        },
-        {
-            "before": ["L"],
-            "after": ["5","l" ]
-        },
-        {
-            "before": ["S"],
-            "commands": ["workbench.action.files.save"]
-        },
-        {
-            "before": ["<C-n>"],
-            "commands": [":nohl"]
-        },
-        {
-            "before":["<leader>","<leader>"],
-            "after": ["w","b","v","e"]
-        },
-        {
-            "before":["<leader>","t","m"],
-            "commands":["workbench.action.terminal.toggleTerminal"],
-            "when":"terminal.active"
-        }
+      {
+        "before": ["<leader>", "d"],
+        "after": ["d", "d"]
+      },
+      {
+        "before": ["J"],
+        "after": ["5", "j"]
+      },
+      {
+        "before": ["K"],
+        "after": ["5", "k"]
+      },
+      {
+        "before": ["H"],
+        "after": ["5", "h"]
+      },
+      {
+        "before": ["L"],
+        "after": ["5", "l"]
+      },
+      {
+        "before": ["S"],
+        "commands": ["workbench.action.files.save"]
+      },
+      {
+        "before": ["<C-n>"],
+        "commands": [":nohl"]
+      },
+      {
+        "before": ["<leader>", "w"],
+        "after": ["w", "b", "v", "e"]
+      },
+      {
+        "before": ["<leader>", "t", "m"],
+        "commands": ["workbench.action.terminal.toggleTerminal"],
+        "when": "terminal.active"
+      },
+      {
+        "before": ["<leader>", "v", "p"],
+        "commands": ["workbench.files.action.focusFilesExplorer"]
+      },
+      {
+        "before": ["<leader>", "h"],
+        "commands": [""]
+      },
+      {
+        "before": ["<leader>", "["],
+        "commands": ["workbench.action.navigateBack"]
+      },
+      {
+        "before": ["<leader>", "]"],
+        "commands": ["workbench.action.navigateForward"]
+      },
+      {
+        "before": ["<leader>", "i"],
+        "commands": ["editor.action.goToDeclaration"]
+      },
+      {
+        "before": ["<leader>", "v", "s"],
+        "commands": ["workbench.action.gotoSymbol"]
+      },
+      {
+        "before": ["<leader>", "f", "c"],
+        "commands": ["editor.action.formatDocument"]
+      },
+      {
+        "before": ["t", "h"],
+        "commands": ["workbench.action.previousEditor"]
+      },
+      {
+        "before": ["t", "l"],
+        "commands": ["workbench.action.nextEditor"]
+      },
+      {
+        "before": ["t", "t"],
+        "commands": ["workbench.action.closeActiveEditor"]
+      }
     ],
     "vim.leader": "<space>",
     "vim.handleKeys": {

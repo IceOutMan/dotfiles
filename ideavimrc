@@ -1,4 +1,6 @@
 
+
+
 """ Map leader to space ---------------------
 let mapleader=" "
 
@@ -56,19 +58,20 @@ map <Leader>su <Action>(FindUsages)
 """ code
 map <Leader>] <Action>(Forward)
 map <Leader>[ <Action>(Back)
-
-map mj <Action>(MethodDown)
-map mk <Action>(MethodUp)
-
-map <Leader>gf <Action>(GotoFile)
 map <Leader>i <Action>(GotoImplementation)
 map <Leader>fc <Action>(ReformatCode)
 map <Leader>m <Action>(ImplementMethods)
 
+""" code method
+map mj <Action>(MethodDown)
+map mk <Action>(MethodUp)
+
 map <Leader>qd <Action>(QuickJavaDoc)
 
+""" code collapse or expand
 map <Leader>ca <Action>(CollapseAllRegions)
 map <Leader>ea <Action>(ExpandAllRegions)
+
 """ tab
 map tl <Action>(NextTab)
 map th <Action>(PreviousTab)
@@ -96,3 +99,4 @@ noremap W 2w
 
 """ Mappings --------------------------------
 """ inoremap ,f for(int i = 0; i#; i++) {}<ESC>F#xi<
+
