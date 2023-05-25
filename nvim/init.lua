@@ -1,5 +1,6 @@
 require("init-packer")
 
+require('basic')
 require("init-lsp")
 require("init-ident")
 require("init-coc")
@@ -29,13 +30,16 @@ vim.o.cursorline = true
 --     },
 -- }
 
-
 vim.g.mapleader = ' '
 
 -- 快速保存、退出、加载配置文件
 vim.cmd('noremap Q :q<CR>')
 vim.cmd('noremap S :w<CR>')
 vim.cmd('noremap R :source $INITVIM<CR>')
+
+-- 自定义操作
+-- 选中当前单词
+vim.cmd('noremap <LEADER>w wbve')
 
 -- 快速光标移动
 vim.cmd('noremap J 5j')
@@ -76,7 +80,8 @@ vim.cmd('noremap th :set nosplitright<CR>:vsplit<CR>:te<CR>')
 vim.cmd('noremap tk :set nosplitbelow<CR>:split<CR>:te<CR>')
 vim.cmd('noremap tj :set splitbelow<CR>:split<CR>:te<CR>')
 
-
+-- Code Operation
+vim.cmd('noremap <LEADER>fc :call CocAction(\'format\')<CR>')
 
 
 -- Nvim tree qucik 
