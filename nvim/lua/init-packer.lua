@@ -97,8 +97,7 @@ return require('packer').startup(function(use)
             "nvim-telescope/telescope.nvim"
         },
         config = function()
-            require("lazy").setup {}
-            require("telescope").load_extension("lazygit")
+            require("lazy").setup ()
         end
     })
 
