@@ -56,6 +56,9 @@ return require('packer').startup(function(use)
     use { 'neoclide/coc.nvim', branch = 'release' }
 
 
+    -- go
+
+
     -- code formater
     use 'sbdchd/neoformat'
     -- ident config in init.lua
@@ -65,6 +68,11 @@ return require('packer').startup(function(use)
         'nvim-treesitter/nvim-treesitter',
         run = ':TSUpdate'
     }
+
+    -- code runner
+    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
+    use 'thinca/vim-quickrun'
+
 
 
     -- color scheme
@@ -81,10 +89,39 @@ return require('packer').startup(function(use)
             require('gitsigns').setup()
         end
     }
+    --  lazygit
+    use({
+        "kdheepak/lazygit.nvim",
+        -- optional for floating window border decoration
+        requires = {
+            "nvim-lua/plenary.nvim",
+            "nvim-telescope/telescope.nvim"
+        },
+        config = function()
+            require("lazy").setup {}
+            require("telescope").load_extension("lazygit")
+        end
+    })
 
     -- like ideavimrc argtextobj
     use 'kana/vim-textobj-user'
-    use { 'sgur/vim-textobj-parameter' , requires = 'kana/vim-textobj-user'}
+    use { 'sgur/vim-textobj-parameter', requires = 'kana/vim-textobj-user' }
+
+    -- telescope
+    use {
+        'nvim-telescope/telescope.nvim', tag = '0.1.1',
+        -- or                            , branch = '0.1.x',
+        requires = { { 'nvim-lua/plenary.nvim' } }
+    }
+
+    -- flutter
+    use {
+        'akinsho/flutter-tools.nvim',
+        requires = {
+            'nvim-lua/plenary.nvim',
+            'stevearc/dressing.nvim', -- optional for vim.ui.select
+        },
+    }
 
 
     -- use 'NTBBloodbath/doom-one.nvim'

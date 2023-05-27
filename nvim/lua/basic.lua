@@ -5,3 +5,4 @@ vim.api.nvim_set_keymap('x', 'ia', '<Plug>(textobj-parameter-a)', {})
 vim.api.nvim_set_keymap('o', 'ia', '<Plug>(textobj-parameter-a)', {})
 vim.api.nvim_set_keymap('x', 'ic', '<Plug>(textobj-parameter-i)', {})
 vim.api.nvim_set_keymap('o', 'ic', '<Plug>(textobj-parameter-i)', {})
+

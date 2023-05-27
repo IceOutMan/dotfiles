@@ -1,9 +1,9 @@
 require("init-packer")
-
 require('basic')
 require("init-lsp")
 require("init-ident")
 require("init-coc")
+require("init-flutter")
 
 -- common config
 vim.o.relativenumber = true
@@ -30,6 +30,7 @@ vim.o.cursorline = true
 --     },
 -- }
 
+
 vim.g.mapleader = ' '
 
 -- 快速保存、退出、加载配置文件
@@ -37,15 +38,13 @@ vim.cmd('noremap Q :q<CR>')
 vim.cmd('noremap S :w<CR>')
 vim.cmd('noremap R :source $INITVIM<CR>')
 
--- 自定义操作
--- 选中当前单词
-vim.cmd('noremap <LEADER>w wbve')
-
 -- 快速光标移动
 vim.cmd('noremap J 5j')
 vim.cmd('noremap K 5k')
 vim.cmd('noremap L 5l')
 vim.cmd('noremap H 5h')
+
+vim.cmd('noremap <LEADER>w wbve')
 
 -- Tab Change
 vim.cmd('noremap tn :tabe<CR>')
@@ -64,15 +63,16 @@ vim.cmd('noremap <LEADER>l <C-w>l')
 vim.cmd('noremap <LEADER>j <C-w>j')
 vim.cmd('noremap <LEADER>k <C-w>k')
 
--- code skip <C-o> is Back, <C-i> is Pre
-vim.cmd('noremap <LEADER>[ <C-o>')
-vim.cmd('noremap <LEADER>] <C-i>')
-
 -- Screen Split
 vim.cmd('noremap sl :set splitright<CR>:vsplit<CR>')
 vim.cmd('noremap sh :set nosplitright<CR>:vsplit<CR>')
 vim.cmd('noremap sk :set nosplitbelow<CR>:split<CR>')
 vim.cmd('noremap sj :set splitbelow<CR>:split<CR>')
+
+-- code skip <C-o> is Back, <C-i> is Pre
+vim.cmd('noremap <LEADER>[ <C-o>')
+vim.cmd('noremap <LEADER>] <C-i>')
+
 
 -- Terminal Split
 vim.cmd('noremap tl :set splitright<CR>:vsplit<CR>:te<CR>')
@@ -84,9 +84,17 @@ vim.cmd('noremap tj :set splitbelow<CR>:split<CR>:te<CR>')
 vim.cmd('noremap <LEADER>fc :call CocAction(\'format\')<CR>')
 
 
--- Nvim tree qucik 
+-- telescope operation map
+-- Find files using Telescope command-line sugar.
+vim.cmd('noremap <LEADER>ff :Telescope find_files<CR>')
+vim.cmd('noremap <LEADER>fg :Telescope live_grep<CR>')
+vim.cmd('noremap <LEADER>fb :Telescope buffers<CR>')
+vim.cmd('noremap <LEADER>fh :Telescope help_tags<CR>')
+
+
+-- Nvim tree qucik
 vim.cmd('map tt :NvimTreeToggle<CR>')
 -- vim.cmd('map <LEADER>r :QuickRun<CR>')
-
--- Terminal-Mode close
+--
+-- Terminal-Mode Quit
 vim.cmd('tnoremap tq <C-\\><C-n>')
