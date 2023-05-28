@@ -97,10 +97,6 @@ return require('packer').startup(function(use)
             "nvim-lua/plenary.nvim",
             "nvim-telescope/telescope.nvim"
         },
-        config = function()
-            require("lazy").setup {}
-            require("telescope").load_extension("lazygit")
-        end
     })
 
     -- like ideavimrc argtextobj
