@@ -1,9 +1,9 @@
 require("init-packer")
 require('basic')
-require("init-lsp")
 require("init-ident")
 require("init-coc")
 require("init-flutter")
+-- require("init-lsp")
 
 -- common config
 vim.o.relativenumber = true
