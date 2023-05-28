@@ -70,7 +70,6 @@ return require('packer').startup(function(use)
     }
 
     -- code runner
-    use { 'michaelb/sniprun', run = 'bash ./install.sh' }
     use 'thinca/vim-quickrun'
 
 
