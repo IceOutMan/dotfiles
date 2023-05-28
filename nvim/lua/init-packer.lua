@@ -82,12 +82,12 @@ return require('packer').startup(function(use)
     }
 
     -- git
-    use {
-        'lewis6991/gitsigns.nvim',
-        config = function()
-            require('gitsigns').setup()
-        end
-    }
+    -- use {
+    --     'lewis6991/gitsigns.nvim',
+    --     config = function()
+    --         require('gitsigns').setup()
+    --     end
+    -- }
     --  lazygit
     use({
         "kdheepak/lazygit.nvim",
