@@ -61,6 +61,8 @@ map <Leader>[ <Action>(Back)
 map <Leader>i <Action>(GotoImplementation)
 map <Leader>fc <Action>(ReformatCode)
 map <Leader>m <Action>(ImplementMethods)
+map [g <Action>(GotoPreviousError)
+map ]g <Action>(GotoNextError)
 
 """ code method
 map mj <Action>(MethodDown)
