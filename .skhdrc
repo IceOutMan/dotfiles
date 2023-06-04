@@ -106,13 +106,12 @@
 # ]
 
 # open terminal, blazingly fast compared to iTerm/Hyper
-cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+# cmd - return : /Applications/kitty.app/Contents/MacOS/kitty --single-instance -d ~
+# cmd - return : /Applications/iTerm.app/Contents/MacOS/iTerm2 --single-instance -d ~
 
 # open qutebrowser
-cmd + shift - return : ~/Scripts/qtb.sh
+# cmd + shift - return : ~/Scripts/qtb.sh
 
-# open mpv
-cmd - m : open -na /Applications/mpv.app $(pbpaste)
 
 # 窗口聚焦
 alt - h : yabai -m window --focus west
@@ -131,6 +130,14 @@ shift + alt + ctrl - h : yabai -m window --warp west
 shift + alt + ctrl - h : yabai -m window --warp south
 shift + alt + ctrl - h : yabai -m window --warp north
 shift + alt + ctrl - h : yabai -m window --warp east
+
+# 移动至 显示器
+# Focus display focused before the current one (so you can alternate)
+# ctrl + alt : yabai -m display --focus recent
+# Focus previous display by arrangement index
+ctrl + alt - h : yabai -m display --focus prev
+# Focus next display by arrangement index
+ctrl + alt - l : yabai -m display --focus next
 
 # 旋转窗口布局
 alt - r : yabai -m space --rotate 90
@@ -162,11 +169,13 @@ shift + alt - 7 : yabai -m window --space 7; yabai -m space --focus 7
 shift + alt - 8 : yabai -m window --space 8; yabai -m space --focus 8
 shift + alt - 9 : yabai -m window --space 9; yabai -m space --focus 9
 
+
+
 # 改变窗口大小
 # 上面窗口 -20 大小 , 相当于当前窗口 +20 向上
-shift + alt - k : yabai -m window --resize top:0:-20
+ctrl + shift - k : yabai -m window --resize top:0:-20
 # 上面窗口+20  ， 相当于是上面窗口 +20 向下
-shift + alt - j : yabai -m window --resize top:0:20
+ctrl + shift - j : yabai -m window --resize top:0:20
 # 左边窗口 -20 ，
-shift + alt - h : yabai -m window --resize left:-20:0
-shift + alt - l : yabai -m window --resize left:20:0
+ctrl + shift - h : yabai -m window --resize left:-20:0
+ctrl + shift - l : yabai -m window --resize left:20:0
