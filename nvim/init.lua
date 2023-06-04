@@ -94,6 +94,7 @@ vim.cmd('noremap <LEADER>fh :Telescope help_tags<CR>')
 
 -- Nvim tree qucik
 vim.cmd('map tt :NvimTreeToggle<CR>')
+vim.cmd('tnoremap <LEADER>tm <C-\\><C-n>:ToggleTerm<CR>')
 -- vim.cmd('map <LEADER>r :QuickRun<CR>')
 --
 -- Terminal-Mode Quit

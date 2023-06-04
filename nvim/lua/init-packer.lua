@@ -118,6 +118,12 @@ return require('packer').startup(function(use)
         },
     }
 
+    -- multi terminal in vim
+    use { "akinsho/toggleterm.nvim", tag = '*',
+        config = function()
+            require("toggleterm").setup()
+        end
+    }
 
     -- use 'NTBBloodbath/doom-one.nvim'
 end)
