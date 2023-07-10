@@ -1,6 +1,4 @@
 
-
-
 """ Map leader to space ---------------------
 let mapleader=" "
 
@@ -41,6 +39,11 @@ map <Leader>vd <Action>(ShowUmlDiagramPopup)
 map <Leader>vs <Action>(FileStructurePopup)
 map <Leader>vh <Action>(HierarchyGroup)
 
+""" file
+map <Leader>cf <Action>(NewFile)
+map <Leader>cc <Action>(NewClass)
+map <Leader>cd <Action>(NewDir)
+
 
 """ action map
 map <leader>b <Action>(ToggleLineBreakpoint)
@@ -55,14 +58,31 @@ map <Leader>sc <Action>(GotoClass)
 map <Leader>sp <Action>(FindInPath)
 map <Leader>su <Action>(FindUsages)
 
+""" window
+map <Leader>h <Action>(ResizeToolWindowLeft)
+map <Leader>l <Action>(ResizeToolWindowRight)
+
+
 """ code
 map <Leader>] <Action>(Forward)
 map <Leader>[ <Action>(Back)
 map <Leader>i <Action>(GotoImplementation)
+map <Leader>u <Action>(GotoSuperMethod)
 map <Leader>fc <Action>(ReformatCode)
 map <Leader>m <Action>(ImplementMethods)
 map [g <Action>(GotoPreviousError)
 map ]g <Action>(GotoNextError)
+map <leader>rn <Action>(RenameElement)
+
+map gcc <Action>(CommentByLineComment)
+
+""" extract
+map <Leader>em <Action>(ExtractMethod)
+map <Leader>ep <Action>(IntroduceParameter)
+map <Leader>ec <Action>(IntroduceConstant)
+map <Leader>ef <Action>(IntroduceField)
+
+
 
 """ code method
 map mj <Action>(MethodDown)
@@ -83,9 +103,9 @@ map tt <Action>(CloseContent)
 map ga <Action>(Annotate)
 
 """ run debug
-map <Leader>r <Action>(RunClass)
+map <Leader>rc <Action>(RunClass)
 map <Leader>R <Action>(Run)
-map <Leader>d <Action>(DebugClass)
+map <Leader>dc <Action>(DebugClass)
 map <Leader>D <Action>(Debug)
 map <Leader>S <Action>(Stop)
 
@@ -101,4 +121,3 @@ noremap W 2w
 
 """ Mappings --------------------------------
 """ inoremap ,f for(int i = 0; i#; i++) {}<ESC>F#xi<
-
