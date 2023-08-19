@@ -14,7 +14,6 @@
       "<C-f>": false
   },
   "vim.leader": "<space>",
-   // esaymotion plugin 
    "vim.easymotion": true,
    "vim.easymotionMarkerFontStyle": "bold",
    "vim.incsearch": true,
