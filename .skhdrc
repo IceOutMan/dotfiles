@@ -159,9 +159,9 @@ alt + shift - 9 : yabai -m window --space 9; yabai -m space --focus 9
 # Focus display focused before the current one (so you can alternate)
 # ctrl + alt : yabai -m display --focus recent
 # Focus previous display by arrangement index
-ctrl - h : yabai -m display --focus prev
+alt + ctrl - n : yabai -m display --focus prev
 # Focus next display by arrangement index
-ctrl - l : yabai -m display --focus next
+alt + ctrl - l : yabai -m display --focus next
 
 # 旋转窗口布局
 alt -r : yabai -m space --rotate 90
