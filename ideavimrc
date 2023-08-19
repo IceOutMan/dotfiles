@@ -10,8 +10,21 @@ set textobj-entire
 """ cia daa via
 set argtextobj
 
-set number
-set relativenumber
+""" easymotion
+let g:EasyMotion_do_mapping= 0
+set easymotion
+nmap <LEADER><LEADER> <Plug>(easymotion-s)
+
+""" NERDTree 仿真
+""" https://github.com/JetBrains/ideavim/wiki/NERDTree-support
+set NERDTree
+nmap <LEADER>vp :NERDTreeFind<CR>
+nmap tt :NERDTreeToggle<CR>
+
+
+
+""" VIM EXTENTION CONFIG
+set keep-english-in-normal-and-restore-in-insert
 
 """ Plugin settings -------------------------
 let g:argtextobj_pairs="[:],(:),<:>"
@@ -19,7 +32,17 @@ let g:argtextobj_pairs="[:],(:),<:>"
 """ Common settings -------------------------
 """ set showmode
 """ set so=5
+set number
+set relativenumber
+
+""" 高亮搜索
+set hlsearch
+""" 搜索时条转到目标处
 set incsearch
+""" 智能搜索
+set ignorecase
+set smartcase
+
 """ set nu
 
 
@@ -70,6 +93,7 @@ map <Leader>i <Action>(GotoImplementation)
 map <Leader>u <Action>(GotoSuperMethod)
 map <Leader>fc <Action>(ReformatCode)
 map <Leader>m <Action>(ImplementMethods)
+map gd <Action>(GotoDeclaration)
 map [g <Action>(GotoPreviousError)
 map ]g <Action>(GotoNextError)
 map <leader>rn <Action>(RenameElement)
@@ -97,7 +121,7 @@ map <Leader>ea <Action>(ExpandAllRegions)
 """ tab
 map tl <Action>(NextTab)
 map th <Action>(PreviousTab)
-map tt <Action>(CloseContent)
+map tc <Action>(CloseContent)
 
 """ git
 map ga <Action>(Annotate)
@@ -108,6 +132,7 @@ map <Leader>R <Action>(Run)
 map <Leader>dc <Action>(DebugClass)
 map <Leader>D <Action>(Debug)
 map <Leader>S <Action>(Stop)
+
 
 noremap J 5j
 noremap K 5k
