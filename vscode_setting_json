@@ -1,116 +1,142 @@
 {
-    "window.zoomLevel": 2,
-    "workbench.colorTheme": "Visual Studio Light",
-    "workbench.editorAssociations": [
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "explorer.confirmDelete": false,
+  "editor.suggestSelection": "first",
+  "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+  "[javascript]": {
+      
+  },
+  "terminal.integrated.shell.osx": "/bin/zsh",
+  "cmake.configureOnOpen": true,
+  "vim.handleKeys": {
+      "<C-a>": false,
+      "<C-f>": false
+  },
+  "vim.leader": "<space>",
+   // esaymotion plugin 
+   "vim.easymotion": true,
+   "vim.easymotionMarkerFontStyle": "bold",
+   "vim.incsearch": true,
+   "vim.useSystemClipboard": true,
+   "vim.useCtrlKeys": true,
+   "vim.hlsearch": true,
+   "vim.insertModeKeyBindings": [
+       {
+           "before": [
+               "j",
+               "j"
+           ],
+           "after": [
+               "<Esc>"
+           ]
+       }
+   ],
+   "vim.normalModeKeyBindingsNonRecursive": [
         {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
-    ],
-    "editor.lineNumbers": "relative",
-    "editor.rulers": [
-    ],
-    // esaymotion plugin 
-    "vim.easymotion": true,
-    "vim.incsearch": true,
-    "vim.useSystemClipboard": true,
-    "vim.useCtrlKeys": true,
-    "vim.hlsearch": true,
-    "vim.insertModeKeyBindings": [
+          "before": ["<leader>", "d"],
+          "after": ["d", "d"]
+        },
         {
-            "before": [
-                "j",
-                "j"
-            ],
-            "after": [
-                "<Esc>"
-            ]
+          "before": ["J"],
+          "after": ["5", "j"]
+        },
+        {
+          "before": ["K"],
+          "after": ["5", "k"]
+        },
+        {
+          "before": ["H"],
+          "after": ["5", "h"]
+        },
+        {
+          "before": ["L"],
+          "after": ["5", "l"]
+        },
+        {
+          "before": ["S"],
+          "commands": ["workbench.action.files.save"]
+        },
+        {
+          "before": ["<C-n>"],
+          "commands": [":nohl"]
+        },
+        {
+          "before": ["<leader>", "w"],
+          "after": ["w", "b", "v", "e"]
+        },
+        {
+          "before": ["<leader>", "t", "m"],
+          "commands": ["workbench.action.terminal.toggleTerminal"],
+          "when": "terminal.active"
+        },
+        {
+          "before": ["<leader>", "v", "p"],
+          "commands": ["workbench.files.action.focusFilesExplorer"]
+        },
+        {
+          "before": ["<leader>", "h"],
+          "commands": [""]
+        },
+        {
+          "before": ["<leader>", "["],
+          "commands": ["workbench.action.navigateBack"]
+        },
+        {
+          "before": ["<leader>", "]"],
+          "commands": ["workbench.action.navigateForward"]
+        },
+        {
+          "before"  : ["[","g"],
+          "commands" : ["editor.action.marker.prevInFiles"]
+        },
+       {
+          "before"  : ["]","g"],
+          "commands" : ["editor.action.marker.nextInFiles"]
+        },
+
+        {
+          "before": ["<leader>", "i"],
+          "commands": ["editor.action.goToDeclaration"]
+        },
+        {
+          "before": ["<leader>", "v", "s"],
+          "commands": ["workbench.action.gotoSymbol"]
+        },
+        {
+          "before": ["<leader>", "f", "c"],
+          "commands": ["editor.action.formatDocument"]
+        },
+        {
+          "before": ["t", "h"],
+          "commands": ["workbench.action.previousEditor"]
+        },
+        {
+          "before": ["t", "l"],
+          "commands": ["workbench.action.nextEditor"]
+        },
+        {
+          "before": ["t", "t"],
+          "commands": ["workbench.action.closeActiveEditor"]
         }
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
+   ],
+  "C_Cpp.updateChannel": "Insiders",
+  "mssql.connections": [
       {
-        "before": ["<leader>", "d"],
-        "after": ["d", "d"]
-      },
-      {
-        "before": ["J"],
-        "after": ["5", "j"]
-      },
-      {
-        "before": ["K"],
-        "after": ["5", "k"]
-      },
-      {
-        "before": ["H"],
-        "after": ["5", "h"]
-      },
-      {
-        "before": ["L"],
-        "after": ["5", "l"]
-      },
-      {
-        "before": ["S"],
-        "commands": ["workbench.action.files.save"]
-      },
-      {
-        "before": ["<C-n>"],
-        "commands": [":nohl"]
-      },
-      {
-        "before": ["<leader>", "w"],
-        "after": ["w", "b", "v", "e"]
-      },
-      {
-        "before": ["<leader>", "t", "m"],
-        "commands": ["workbench.action.terminal.toggleTerminal"],
-        "when": "terminal.active"
-      },
-      {
-        "before": ["<leader>", "v", "p"],
-        "commands": ["workbench.files.action.focusFilesExplorer"]
-      },
-      {
-        "before": ["<leader>", "h"],
-        "commands": [""]
-      },
-      {
-        "before": ["<leader>", "["],
-        "commands": ["workbench.action.navigateBack"]
-      },
-      {
-        "before": ["<leader>", "]"],
-        "commands": ["workbench.action.navigateForward"]
-      },
-      {
-        "before": ["g", "d"],
-        "commands": ["editor.action.goToDeclaration"]
-      },
-      {
-        "before": ["<leader>", "v", "s"],
-        "commands": ["workbench.action.gotoSymbol"]
-      },
-      {
-        "before": ["<leader>", "f", "c"],
-        "commands": ["editor.action.formatDocument"]
-      },
-      {
-        "before": ["t", "h"],
-        "commands": ["workbench.action.previousEditor"]
-      },
-      {
-        "before": ["t", "l"],
-        "commands": ["workbench.action.nextEditor"]
-      },
-      {
-        "before": ["t", "t"],
-        "commands": ["workbench.action.closeActiveEditor"]
+          "server": "{{put-server-name-here}}",
+          "database": "{{put-database-name-here}}",
+          "user": "{{put-username-here}}",
+          "password": ""
       }
-    ],
-    "vim.leader": "<space>",
-    "vim.handleKeys": {
-        "<C-a>": false,
-        "<C-f>": false
-    },
-    "explorer.confirmDelete": false,
-    
+  ],
+  "workbench.colorTheme": "Default Light+",
+  "workbench.editor.untitled.hint": "hidden",
+  "security.workspace.trust.untrustedFiles": "open",
+  "explorer.confirmDragAndDrop": false,
+  "editor.fontVariations": false,
+  "editor.rulers": [],
+  "editor.semanticTokenColorCustomizations": {},
+  "excalidraw.theme": "light",
+  "window.zoomLevel": 1,
+  "editor.fontLigatures": false
 }
