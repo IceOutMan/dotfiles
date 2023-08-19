@@ -82,7 +82,7 @@
         "commands": ["workbench.action.navigateForward"]
       },
       {
-        "before": ["<leader>", "i"],
+        "before": ["g", "d"],
         "commands": ["editor.action.goToDeclaration"]
       },
       {
