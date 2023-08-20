@@ -101,6 +101,16 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+# tmux 
+alias twk="tmux kill-window -t"
+alias tsk="tmux kill-session -t"
+alias tsn="tmux new -s"
+alias tsa="tmux attach -t"
+alias tsd="tmux detach"
+alias tss="tmux switch -t"
+alias tls="tmux ls"
+
+
 
 #shell alias
 alias cl="clear"
