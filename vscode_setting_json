@@ -33,6 +33,10 @@
    ],
    "vim.normalModeKeyBindingsNonRecursive": [
         {
+          "before" : ["<leader>", "<leader>"],
+          "after" : ["<leader>", "<leader>", "s"]
+        } ,
+        {
           "before": ["<leader>", "d"],
           "after": ["d", "d"]
         },
