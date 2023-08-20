@@ -119,7 +119,7 @@
           "commands": ["workbench.action.nextEditor"]
         },
         {
-          "before": ["t", "t"],
+          "before": ["t", "c"],
           "commands": ["workbench.action.closeActiveEditor"]
         }
    ],
