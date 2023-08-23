@@ -73,6 +73,8 @@ map <leader>b <Action>(ToggleLineBreakpoint)
 map <Leader>vb <Action>(ViewBreakpoints)
 """ terminal tool window
 map <Leader>tm <Action>(ActivateTerminalToolWindow)
+map <Leader>tc <Action>(HideActiveWindow)
+
 
 """ search
 map <Leader>sa <Action>(SearchEverywhere)
