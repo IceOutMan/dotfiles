@@ -47,7 +47,7 @@ local nmappings = {
 
     -- code skip <C-o> is Back, <C-i> is Pre
     { from = "<LEADER>[",  to = "<C-o>",                            mode = mode_n },
-    { from = "<LEADER>[",  to = "<C-i>",                            mode = mode_n },
+    { from = "<LEADER>]",  to = "<C-i>",                            mode = mode_n },
 
     -- Code Operation | coc | code format
     { from = "<LEADER>fc", to = ":call CocAction(\'format\')<CR>",  mode = mode_n },
