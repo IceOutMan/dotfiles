@@ -75,6 +75,11 @@ map <Leader>vb <Action>(ViewBreakpoints)
 map <Leader>tm <Action>(ActivateTerminalToolWindow)
 map <Leader>tc <Action>(HideActiveWindow)
 
+""" debug
+map <Leader>o <Action>(StepOver)
+map <Leader>i <Action>(StepInto)
+map <Leader>rt <Action>(RunToCursor)
+map <Leader>e <Action>(EvaluateExpression)
 
 """ search
 map <Leader>sa <Action>(SearchEverywhere)
