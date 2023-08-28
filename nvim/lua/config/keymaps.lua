@@ -12,14 +12,13 @@ local mode_t  = { "t" }
 local nmappings = {
     { from = "Q",          to = ":q<CR>",                           mode = mode_n },
     { from = "S",          to = ":w<CR>",                           mode = mode_n },
-    { from = "J",          to = "5j",                               mode = mode_n },
 
     -- 快速光标移动
-    { from = "J",          to = "5j",                               mode = mode_n },
-    { from = "K",          to = "5k",                               mode = mode_n },
-    { from = "L",          to = "5l",                               mode = mode_n },
-    { from = "H",          to = "5h",                               mode = mode_n },
-    { from = "<Leader>w",  to = "wbve",                             mode = mode_n },
+    { from = "J",          to = "5j",                               mode = mode_nv },
+    { from = "K",          to = "5k",                               mode = mode_nv },
+    { from = "L",          to = "5l",                               mode = mode_nv },
+    { from = "H",          to = "5h",                               mode = mode_nv },
+    { from = "<Leader>w",  to = "wbve",                             mode = mode_nv },
     --
     -- Tab Change
     { from = "tn",         to = ":tabnew<CR>",                      mode = mode_n },
