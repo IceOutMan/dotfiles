@@ -2,7 +2,6 @@
 vim.opt.backup = false
 vim.opt.writebackup = false
 
-
 -- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 -- delays and poor user experience
 vim.opt.updatetime = 300
@@ -28,9 +27,10 @@ end
 -- other plugins before putting this into your config
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
 -- <TAB>
-keyset("i", "j", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+keyset("i", "<c-j>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 -- shift + tab <S-TAB>
-keyset("i", "k", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+keyset("i", "<c-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
+
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
@@ -38,10 +38,13 @@ keyset("i", "k", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 --  here use <TAB> select confirm(())
 keyset("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
--- Use <c-j> to trigger snippets
-keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
+
+
+
+-- Use <c-]> to trigger snippets
+-- keyset("i", "<c-]>", "<Plug>(coc-snippets-expand-jump)")
 -- Use <c-space> to trigger completion
-keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
+-- keyset("i", "<c-space>", "coc#refresh()", {silent = true, expr = true})
 
 -- Use `[g` and `]g` to navigate diagnostics
 -- Use `:CocDiagnostics` to get all diagnostics of current buffer in location list
@@ -67,7 +70,7 @@ function _G.show_docs()
         vim.api.nvim_command('!' .. vim.o.keywordprg .. ' ' .. cw)
     end
 end
-keyset("n", "+", '<CMD>lua _G.show_docs()<CR>', {silent = true})
+keyset("n", "<c-]>", '<CMD>lua _G.show_docs()<CR>', {silent = true})
 
 
 -- Highlight the symbol and its references on a CursorHold event(cursor is idle)
