@@ -2,9 +2,11 @@
 vim.opt.backup = false
 vim.opt.writebackup = false
 
+
 -- Having longer updatetime (default is 4000 ms = 4s) leads to noticeable
 -- delays and poor user experience
 vim.opt.updatetime = 300
+
 
 -- Always show the signcolumn, otherwise it would shift the text each time
 -- diagnostics appeared/became resolved
@@ -17,21 +19,24 @@ function _G.check_back_space()
     return col == 0 or vim.fn.getline('.'):sub(col, col):match('%s') ~= nil
 end
 
+
+
 -- Use Tab for trigger completion with characters ahead and navigate
 -- NOTE: There's always a completion item selected by default, you may want to enable
 -- no select by setting `"suggest.noselect": true` in your configuration file
 -- NOTE: Use command ':verbose imap <tab>' to make sure Tab is not mapped by
 -- other plugins before putting this into your config
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
-keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
--- shift + tab
-keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
-
+-- <TAB>
+keyset("i", "j", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
+-- shift + tab <S-TAB>
+keyset("i", "k", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
 --  :verbose imap <cr> 查看 <CR> 被哪里占用了
-keyset("i", "<cr>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+--  here use <TAB> select confirm(())
+keyset("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
 
 -- Use <c-j> to trigger snippets
 keyset("i", "<c-j>", "<Plug>(coc-snippets-expand-jump)")
@@ -48,6 +53,7 @@ keyset("n", "<space>i", "<Plug>(coc-definition)", {silent = true})
 keyset("n", "<space>m", "<Plug>(coc-implementation)", {silent = true})
 -- keyset("n", "gy", "<Plug>(coc-type-definition)", {silent = true})
 -- keyset("n", "gr", "<Plug>(coc-references)", {silent = true})
+
 
 
 -- Use K to show documentation in preview window
@@ -185,4 +191,3 @@ keyset("n", "<space>p", ":<C-u>CocListResume<cr>", opts)
 
 
 return { 'neoclide/coc.nvim', branch = 'release' }
-
