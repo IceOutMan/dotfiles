@@ -67,6 +67,15 @@ local nmappings = {
     { from = "<Leader>tm", to = "<C-\\><C-n>:ToggleTerm<CR>",       mode = mode_t },
     { from = "<Leader>tm", to = ":ToggleTerm<CR>",                  mode = mode_n },
 
+   -- Code Runner
+   { from = "<Leader>r",   to = ":RunCode<CR>",                     mode = mode_n },
+   { from = "<Leader>rf",  to = ":RunFile<CR>",                     mode = mode_n },
+   { from = "<Leader>rft", to = ":RunFile tab<CR>",                 mode = mode_n },
+   { from = "<Leader>rp",  to = ":RunProject<CR>",                  mode = mode_n },
+   { from = "<Leader>rc",  to = ":RunClose<CR>",                    mode = mode_n },
+   { from = "<Leader>crf", to = ":CRFiletype<CR>",                  mode = mode_n },
+   { from = "<Leader>crp", to = ":CRProjects<CR>",                  mode = mode_n },
+
 
     -- Joshuto
     -- { from = "R", to = ":Joshuto<CR>"}
