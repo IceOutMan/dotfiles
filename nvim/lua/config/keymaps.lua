@@ -75,6 +75,11 @@ local nmappings = {
    { from = "<Leader>crf", to = ":CRFiletype<CR>",                  mode = mode_n },
    { from = "<Leader>crp", to = ":CRProjects<CR>",                  mode = mode_n },
 
+    -- LazyGit
+    { from = "<Leader>gg",  to = ":LazyGit<CR>",                     mode = mode_n },
+    { from = "<Leader>ggc", to = ":LazyGitConfig<CR>",               mode = mode_n },
+
+
 
     -- Joshuto
     -- { from = "R", to = ":Joshuto<CR>"}
