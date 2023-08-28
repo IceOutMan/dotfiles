@@ -9,6 +9,14 @@ return {
                     "java $fileNameWithoutExt"
                 },
                 python = "python3 -u",
+                go = {
+                    "cd $dir &&",
+                    "go run $fileName"
+                },
+                lua = {
+                    "cd $dir &&",
+                    "lua $fileName"
+                },
                 typescript = "deno run",
                 rust = {
                     "cd $dir &&",
