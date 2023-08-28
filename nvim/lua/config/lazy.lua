@@ -18,6 +18,7 @@ require("lazy").setup({
     require("config.plugins.flutter"),
     require("config.plugins.go"),
     require("config.plugins.coc"),
+    require("config.plugins.lazy_git"),
     require("config.plugins.onedark"),
     require("config.plugins.wilder"),
     require("config.plugins.telescope"),
