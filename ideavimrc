@@ -134,9 +134,9 @@ map tc <Action>(CloseContent)
 map ga <Action>(Annotate)
 
 """ run debug
-map <Leader>rc <Action>(RunClass)
+map <Leader>rf <Action>(RunClass)
 map <Leader>R <Action>(Run)
-map <Leader>dc <Action>(DebugClass)
+map <Leader>df <Action>(DebugClass)
 map <Leader>D <Action>(Debug)
 map <Leader>S <Action>(Stop)
 

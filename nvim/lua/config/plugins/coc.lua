@@ -36,7 +36,7 @@ keyset("i", "<c-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 -- <C-g>u breaks current undo, please make your own choice
 --  :verbose imap <cr> 查看 <CR> 被哪里占用了
 --  here use <TAB> select confirm(())
-keyset("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"]], opts)
+keyset("i", "<TAB>", [[coc#pum#visible() ? coc#pum#confirm() : "<TAB>"]], opts)
 
 
 
