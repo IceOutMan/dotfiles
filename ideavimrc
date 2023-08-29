@@ -76,8 +76,8 @@ map <Leader>tm <Action>(ActivateTerminalToolWindow)
 map <Leader>tc <Action>(HideActiveWindow)
 
 """ debug
-map <Leader>o <Action>(StepOver)
-map <Leader>i <Action>(StepInto)
+map <Leader>so <Action>(StepOver)
+map <Leader>si <Action>(StepInto)
 map <Leader>rt <Action>(RunToCursor)
 map <Leader>e <Action>(EvaluateExpression)
 
