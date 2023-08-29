@@ -43,6 +43,9 @@ local nmappings = {
     { from = "sh",         to = ":set nosplitright<CR>:vsplit<CR>", mode = mode_n },
     { from = "sk",         to = ":set nosplitbelow<CR>:split<CR>",  mode = mode_n },
     { from = "sj",         to = ":set splitbelow<CR>:split<CR>",    mode = mode_n },
+    -- Ctrl-w K  移动 panel 到上
+    -- Ctrl-w J  移动 panel 到下
+
 
     -- code skip <C-o> is Back, <C-i> is Pre
     { from = "<LEADER>[",  to = "<C-o>",                            mode = mode_n },
