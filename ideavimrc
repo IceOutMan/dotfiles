@@ -13,7 +13,7 @@ set argtextobj
 """ easymotion
 let g:EasyMotion_do_mapping= 0
 set easymotion
-nmap <LEADER><LEADER> <Plug>(easymotion-s)
+nmap f <Plug>(easymotion-s)
 
 """ NERDTree 仿真
 """ https://github.com/JetBrains/ideavim/wiki/NERDTree-support
@@ -53,92 +53,95 @@ set smartcase
 """ set idearefactormode=keep
 
 """ Mappings --------------------------------
-map S :w<CR>
-map <Leader>w wbve
+nmap S :w<CR>
+nmap <Leader>w wbve
 
 """ show something
-map <Leader>vp <Action>(SelectInProjectView)
-map <Leader>vd <Action>(ShowUmlDiagramPopup)
-map <Leader>vs <Action>(FileStructurePopup)
-map <Leader>vh <Action>(HierarchyGroup)
+nmap <Leader>vp <Action>(SelectInProjectView)
+nmap <Leader>vd <Action>(ShowUmlDiagramPopup)
+nmap <Leader>vs <Action>(FileStructurePopup)
+nmap <Leader>vh <Action>(HierarchyGroup)
 
 """ file
-map <Leader>cf <Action>(NewFile)
-map <Leader>cc <Action>(NewClass)
-map <Leader>cd <Action>(NewDir)
-
+nmap <Leader>cf <Action>(NewFile)
+nmap <Leader>cc <Action>(NewClass)
+nmap <Leader>cd <Action>(NewDir)
 
 """ action map
-map <leader>b <Action>(ToggleLineBreakpoint)
-map <Leader>vb <Action>(ViewBreakpoints)
-""" terminal tool window
-map <Leader>tm <Action>(ActivateTerminalToolWindow)
-map <Leader>tc <Action>(HideActiveWindow)
+nmap <leader>b <Action>(ToggleLineBreakpoint)
+nmap <Leader>vb <Action>(ViewBreakpoints)
 
 """ debug
-map <Leader>so <Action>(StepOver)
-map <Leader>si <Action>(StepInto)
-map <Leader>rt <Action>(RunToCursor)
-map <Leader>e <Action>(EvaluateExpression)
+nmap <Leader>so <Action>(StepOver)
+nmap <Leader>si <Action>(StepInto)
+nmap <Leader>rt <Action>(RunToCursor)
+nmap <Leader>e <Action>(EvaluateExpression)
+
+""" terminal tool window
+nmap <Leader>tm <Action>(ActivateTerminalToolWindow)
+nmap <Leader>tc <Action>(HideActiveWindow)
 
 """ search
-map <Leader>sa <Action>(SearchEverywhere)
-map <Leader>sf <Action>(GotoFile)
-map <Leader>sc <Action>(GotoClass)
-map <Leader>sp <Action>(FindInPath)
-map <Leader>su <Action>(FindUsages)
+nmap <Leader>sa <Action>(SearchEverywhere)
+nmap <Leader>sf <Action>(GotoFile)
+nmap <Leader>sc <Action>(GotoClass)
+nmap <Leader>sp <Action>(FindInPath)
+nmap <Leader>su <Action>(FindUsages)
 
 """ window
-map <Leader>h <Action>(ResizeToolWindowLeft)
-map <Leader>l <Action>(ResizeToolWindowRight)
+nmap <Leader>h <Action>(ResizeToolWindowLeft)
+nmap <Leader>l <Action>(ResizeToolWindowRight)
 
 
 """ code
-map <Leader>] <Action>(Forward)
-map <Leader>[ <Action>(Back)
-map <Leader>i <Action>(GotoImplementation)
-map <Leader>u <Action>(GotoSuperMethod)
-map <Leader>fc <Action>(ReformatCode)
-map <Leader>m <Action>(ImplementMethods)
-map gd <Action>(GotoDeclaration)
-map [g <Action>(GotoPreviousError)
-map ]g <Action>(GotoNextError)
-map <leader>rn <Action>(RenameElement)
+nmap <Leader>] <Action>(Forward)
+nmap <Leader>[ <Action>(Back)
+nmap <Leader>i <Action>(GotoImplementation)
+nmap <Leader>u <Action>(GotoSuperMethod)
+nmap <Leader>fc <Action>(ReformatCode)
+nmap <Leader>m <Action>(ImplementMethods)
+nmap gd <Action>(GotoDeclaration)
+nmap [g <Action>(GotoPreviousError)
+nmap ]g <Action>(GotoNextError)
+nmap <leader>rn <Action>(RenameElement)
 
-map gcc <Action>(CommentByLineComment)
+nmap gcc <Action>(CommentByLineComment)
 
 """ extract
-map <Leader>em <Action>(ExtractMethod)
-map <Leader>ep <Action>(IntroduceParameter)
-map <Leader>ec <Action>(IntroduceConstant)
-map <Leader>ef <Action>(IntroduceField)
+nmap <Leader>em <Action>(ExtractMethod)
+nmap <Leader>ep <Action>(IntroduceParameter)
+nmap <Leader>ec <Action>(IntroduceConstant)
+nmap <Leader>ef <Action>(IntroduceField)
 
 
 
 """ code method
-map mj <Action>(MethodDown)
-map mk <Action>(MethodUp)
+nmap mj <Action>(MethodDown)
+nmap mk <Action>(MethodUp)
 
-map <Leader>qd <Action>(QuickJavaDoc)
+nmap <Leader>qd <Action>(QuickJavaDoc)
 
 """ code collapse or expand
-map <Leader>ca <Action>(CollapseAllRegions)
-map <Leader>ea <Action>(ExpandAllRegions)
+nmap <Leader>ca <Action>(CollapseAllRegions)
+nmap <Leader>ea <Action>(ExpandAllRegions)
 
 """ tab
-map tl <Action>(NextTab)
-map th <Action>(PreviousTab)
-map tc <Action>(CloseContent)
+nmap tl <Action>(NextTab)
+nmap th <Action>(PreviousTab)
+nmap tc <Action>(CloseContent)
 
 """ git
-map ga <Action>(Annotate)
+nmap ga <Action>(Annotate)
 
 """ run debug
-map <Leader>rf <Action>(RunClass)
-map <Leader>R <Action>(Run)
-map <Leader>df <Action>(DebugClass)
-map <Leader>D <Action>(Debug)
-map <Leader>S <Action>(Stop)
+nmap <Leader>rf <Action>(RunClass)
+nmap <Leader>R <Action>(Run)
+nmap <Leader>df <Action>(DebugClass)
+nmap <Leader>D <Action>(Debug)
+nmap <Leader>S <Action>(Stop)
+
+""" run anything
+nmap <Leader>rr <Action>(RunAnything)
 
 
 noremap J 5j
