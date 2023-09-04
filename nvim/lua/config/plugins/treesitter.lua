@@ -16,6 +16,7 @@ return {
                     "query",
                     "dart",
                     "java",
+                    "python",
                     "c",
                     "prisma",
                     "bash",

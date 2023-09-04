@@ -2,7 +2,7 @@ return {
     { 'nvim-tree/nvim-web-devicons' },
     {
         'nvim-tree/nvim-tree.lua',
-        requires = {
+        dependencies = {
             'nvim-tree/nvim-web-devicons', -- optional
         },
         config = function()
