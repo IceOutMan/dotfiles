@@ -26,7 +26,7 @@ require("lazy").setup({
     require("config.plugins.telescope"),
     require("config.plugins.toggleterm"),
     require("config.plugins.autopairs"),
-    require("config.plugins.treesitter"),
+    -- require("config.plugins.treesitter"),
     require("config.plugins.nvim_tree"),
     require("config.plugins.indent"),
     require("config.plugins.comment"),
