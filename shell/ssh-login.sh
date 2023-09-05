@@ -2,16 +2,21 @@
 
 # 检查是否提供了文件名作为参数
 # ALI_YUN host name pass
-if [ $# -ne 1 ]; then
-    echo "用法: $0 <文件名>"
-    exit 1
-fi
+#
+#
+
+# if [ $# -ne 1 ]; then
+#     echo "用法: $0 <文件名>"
+#     exit 1
+# fi
 
 # 检查文件是否存在
-if [ ! -f "$1" ]; then
-    echo "文件不存在: $1"
-    exit 1
+config_file="$1"
+if [ ! -f config_file ]; then
+    # echo "文件不存在: $1"
+    config_file="$SHELL_HOME/mk_config"
 fi
+
 
 # 读取文件并存储每行的 key
 keys=()
@@ -29,7 +34,7 @@ while IFS= read -r line; do
     ssh_host_list+=("$ssh_host")
     ssh_name_list+=("$ssh_name")
     ssh_pass_list+=("$ssh_pass")
-done < "$1"
+done < "$config_file"
 
 # 显示可用的 key
 echo "可用的 keys:"
