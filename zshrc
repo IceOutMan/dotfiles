@@ -166,3 +166,8 @@ export HOMEBREW_BOTTLE_DOMAIN=https://mirrors.ustc.edu.cn/homebrew-bottles/bottl
 
 #tmux
 export TMUX_TMPDIR=~/.tmux/tmp
+
+
+
+# /usr/local/bin 优先
+export PATH=/usr/local/bin:$PATH
