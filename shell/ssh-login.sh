@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/zsh
 
 # 检查是否提供了文件名作为参数
 # ALI_YUN host name pass
