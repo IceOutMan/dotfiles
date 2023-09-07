@@ -1,4 +1,5 @@
--- macOS/Linux: ~/.local/share/nvim
+-- macOS/Linux: ~/.local/share/nvim is vim.fn.stdpath("data")
+-- lazypath ->  ~/.local/share/nvim/lazy/lazy.nvim
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
